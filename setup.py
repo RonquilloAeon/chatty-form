@@ -3,11 +3,13 @@ from setuptools import setup, find_packages
 setup(
     name="chatty-form",
     install_requires=[
-        "openai"
+        "Django==4.1.5",
+        "fastapi==0.88.0",
+        "openai",
     ],
     entry_points={
         "console_scripts": [
-            "chatform = src.main:main"
+            "chatform = src.entrypoints.main:main"
         ]
     },
     packages=find_packages(),
